@@ -1,0 +1,352 @@
+/* General styles and resets */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background-color: #060606;
+  display: grid;
+  place-items: center;
+  color: rgb(185, 185, 185);
+  padding-top: 100px;
+}
+
+/* Header styles */
+.header-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: rgb(0, 0, 0);
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  height: 60px;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between; /* Aligns the logo to the left and menu items to the right */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the header */
+  padding: 0 20px; /* Adds horizontal padding */
+}
+
+.header-bar .logo {
+  font-size: 24px; /* Adjusts the logo size */
+  color: #ffffff; /* Sets the logo color */
+}
+
+.header-bar ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header-bar ul li {
+  padding: 0 15px; /* Adjusts the spacing between nav items */
+}
+
+.header-bar ul li a {
+  text-decoration: none;
+  color: #fff7f7; /* Ensures text color contrasts against the white background */
+  font-weight: bold;
+  transition: color 0.3s; /* Smooth transition for hover effects */
+}
+
+.header-bar ul li a:hover {
+  color: #ff4500; /* Adds a hover effect with a color change */
+}
+
+@media (max-width: 768px) {
+    .header-bar ul {
+        flex-direction: column; /* Stacks nav items vertically on smaller screens */
+        align-items: center;
+    }
+
+    .header-bar ul li {
+        padding: 10px 0; /* Adds more padding for touch targets on smaller screens */
+    }
+}
+
+/* Cards */
+#cards {
+  width: 70%;
+  padding-inline: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  min-width: 200px;
+  height: 350px;
+  flex: 1 1 250px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  position: relative;
+}
+
+.card-content {
+  position: absolute;
+  inset: 1px;
+  background-color: #131315;
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-content > i {
+  font-size: 10rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.card-content > p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.card-content > a {
+  width: 90%;
+  padding-block: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-content > a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Feedback form */
+#feedback-form {
+    width: 100%; /* Set width to 100% to match the cards container */
+    margin-top: 30px; /* Spacing from the cards */
+    opacity: 0.85; /* Matching card transparency */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%; /* Full width */
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 6px;
+    color: white;
+    outline: none;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+button {
+    padding: 12px;
+    width: 100%; /* Full width matching input fields */
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s, border 0.2s;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.wp-block-separator {
+    border: none;
+    height: 0.5px;
+    background-color: rgba(235, 235, 235, 0.5);
+    margin: 20px 0;
+    width: 70%;
+    display: block;
+}
+
+.project-info {
+    width: 70%; /* Matches the width of other content sections */
+    margin: 20px auto; /* Center align and add vertical spacing */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.12); /* Semi-transparent background similar to cards */
+    border-radius: 12px; /* Rounded corners */
+    color: rgba(255, 255, 255, 0.8); /* Light color text */
+    font-size: 16px; /* Adequate reading size */
+}
+
+.project-info h2, .project-info h3 {
+    color: rgba(255, 255, 255, 1); /* Brighter color for headings */
+    margin-bottom: 10px; /* Space below headings */
+}
+
+.project-info p {
+    margin-bottom: 10px; /* Space below paragraphs */
+}
+
+.project-info a {
+    color: #FFD700; /* Gold color for links, adjust as needed */
+    text-decoration: none; /* No underline */
+}
+
+.project-info a:hover {
+    text-decoration: underline; /* Underline on hover for better visibility */
+}
+
+.project-info button {
+    padding: 12px 24px; /* Padding inside the button */
+    background-color: #ff4500; /* Bright, engaging color */
+    border: none; /* No border */
+    border-radius: 6px; /* Rounded corners for the button */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.project-info button:hover {
+    background-color: #e03e10; /* Darker shade on hover */
+}
+
+  
+hr {
+  height: 14px;
+  width: 100%;
+  clip-path: polygon(1px 0px, 0px 0px, 0px 0px, 8px 14px, 13px 14px, 22px 7px, 42px 6px, 49px 2px, 100% 2px, 100% 0px, 42px 0px, 35px 5px, 22px 6px, 13px 13px, 9px 13px);
+  
+  /* padding: 10px; */
+}
+
+h2{
+  color:#ffffff;
+}
+
+
+p {
+  font-size: 1rem; /* 16px */
+  line-height: 1.6; /* 24px line height */
+  margin-bottom: 16px;
+}
+
+.contributing-section {
+  margin-top: 100px; 
+  margin-bottom: 100px;
+  margin-left: 240px;
+  margin-right: 240px;
+
+}
+
+.contributing-section h2,
+.contributing-section p {
+  margin-bottom: 10px; /* Add spacing between the elements for better readability */
+}
+
+a:link, a:visited {
+  color: white; /* Change to #ffffff if using hex codes */
+  text-decoration: none; /* Optional: removes underline */
+}
+
+a:hover, a:focus {
+  color: #cccccc; /* Light grey color for hover and focus */
+  text-decoration: underline; /* Optional: adds underline on hover/focus */
+}
+
+
+.btn-3 {
+  background: rgb(0,172,238);
+background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover{
+   background: transparent;
+  box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover{
+   color: rgba(2,126,251,1);
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: rgba(2,126,251,1);
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
+
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}

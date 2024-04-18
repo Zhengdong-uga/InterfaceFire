@@ -1,0 +1,374 @@
+/* General styles and resets */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background-color: #060606;
+    display: grid;
+    place-items: center;
+    color: rgb(185, 185, 185);
+    padding-top: 100px;
+}
+
+/* Header styles */
+.header-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    height: 60px;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between; /* Aligns the logo to the left and menu items to the right */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the header */
+    padding: 0 20px; /* Adds horizontal padding */
+}
+
+.header-bar .logo {
+    font-size: 24px; /* Adjusts the logo size */
+    color: #ffffff; /* Sets the logo color */
+}
+
+.header-bar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header-bar ul li {
+    padding: 0 15px; /* Adjusts the spacing between nav items */
+}
+
+.header-bar ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Ensures text color contrasts against the white background */
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth transition for hover effects */
+}
+
+.header-bar ul li a:hover {
+    color: #ff4500; /* Adds a hover effect with a color change */
+}
+
+@media (max-width: 768px) {
+    .header-bar ul {
+        flex-direction: column; /* Stacks nav items vertically on smaller screens */
+        align-items: center;
+    }
+
+    .header-bar ul li {
+        padding: 10px 0; /* Adds more padding for touch targets on smaller screens */
+    }
+}
+
+/* Cards */
+#cards {
+  width: 70%;
+  padding-inline: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  min-width: 200px;
+  height: 350px;
+  flex: 1 1 250px;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  position: relative;
+}
+
+.card-content {
+  position: absolute;
+  inset: 1px;
+  background-color: #131315;
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-content > i {
+  font-size: 10rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.card-content > p {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.card-content > a {
+  width: 90%;
+  padding-block: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-content > a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Feedback form */
+#feedback-form {
+    width: 100%; /* Set width to 100% to match the cards container */
+    margin-top: 30px; /* Spacing from the cards */
+    opacity: 0.85; /* Matching card transparency */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%; /* Full width */
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 6px;
+    color: white;
+    outline: none;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+button {
+    padding: 12px;
+    width: 100%; /* Full width matching input fields */
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s, border 0.2s;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.wp-block-separator {
+    border: none;
+    height: 0.5px;
+    background-color: rgba(235, 235, 235, 0.5);
+    margin: 20px 0;
+    width: 70%;
+    display: block;
+}
+
+.project-info {
+    width: 70%; /* Matches the width of other content sections */
+    margin: 20px auto; /* Center align and add vertical spacing */
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.12); /* Semi-transparent background similar to cards */
+    border-radius: 12px; /* Rounded corners */
+    color: rgba(255, 255, 255, 0.8); /* Light color text */
+    font-size: 16px; /* Adequate reading size */
+}
+
+.project-info h2, .project-info h3 {
+    color: rgba(255, 255, 255, 1); /* Brighter color for headings */
+    margin-bottom: 10px; /* Space below headings */
+}
+
+.project-info p {
+    margin-bottom: 10px; /* Space below paragraphs */
+}
+
+.project-info a {
+    color: #FFD700; /* Gold color for links, adjust as needed */
+    text-decoration: none; /* No underline */
+}
+
+.project-info a:hover {
+    text-decoration: underline; /* Underline on hover for better visibility */
+}
+
+.project-info button {
+    padding: 12px 24px; /* Padding inside the button */
+    background-color: #ff4500; /* Bright, engaging color */
+    border: none; /* No border */
+    border-radius: 6px; /* Rounded corners for the button */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.project-info button:hover {
+    background-color: #e03e10; /* Darker shade on hover */
+}
+
+/* index style */
+.container {
+    max-width: 786px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 2rem; /* 32px */
+    font-weight: bold;
+    margin: 24px 0 12px;
+}
+
+p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.6; /* 24px line height */
+    margin-bottom: 16px;
+}
+
+
+/* Break line */
+hr {
+    height: 14px;
+    background-color: #ef4343;
+    width: 100%;
+    clip-path: polygon(1px 0px, 0px 0px, 0px 0px, 8px 14px, 13px 14px, 22px 7px, 42px 6px, 49px 2px, 100% 2px, 100% 0px, 42px 0px, 35px 5px, 22px 6px, 13px 13px, 9px 13px);
+    animation-name: hr;
+    animation-duration: var(--glitched-long-duration);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; 
+    padding: 10px;
+}
+
+@keyframes hr {
+    0% {
+        transform: skew(0deg);
+    }
+    15% {
+        transform: skew(0deg);
+    }
+    16% {
+        transform: skew(20deg);
+    }
+    20% {
+        transform: skew(20deg);
+    }
+    21% {
+        transform: skew(0deg);
+    }
+    100% {
+        right: 35px;
+    }
+}
+
+strong {
+    font-weight: bold;
+}
+
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* h1 to middle */
+h1 {
+    text-align: center; /* Centers the h1 text */
+    color: white;
+  }
+
+h2, h3{
+    color:white;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px; 
+    margin-top: 20px;
+  }
+  
+  .image-gallery figure {
+    margin: 0 10px; /* Adjust spacing between images as needed */
+    text-align: center; /* Center-align the caption text */
+    color: #d7d6d6;
+  }
+  
+  .image-gallery img {
+    max-width: 100%;
+    height: auto;
+    display: block; 
+    color: #d7d6d6;/* Ensures images are block level to allow for captions underneath */
+  }
+  
+  /* Add styles for the captions */
+  .image-gallery figcaption {
+    margin-top: 5px;
+    font-style: Arial;
+    font-size: smaller;
+    color: #fff; /* Or any color that fits your design */
+}
+
+#overlay1 {
+    width: 80%; /* or any other size */
+    display: block;
+    margin: 0 auto; /* This will center the image if the block display is used */
+  }
+  
+  #scanning1 {
+    width: 80%; /* or any other size */
+    display: block;
+    margin: 0 auto; /* This will center the image if the block display is used */
+  }
+
+  
+#overlay1-figure figcaption, #scanning1-figure figcaption {
+    margin-top: 20px;
+    color: #fff; /* Replace with the color used for other captions */
+    text-align: center; /* Centers the text */
+    font-style: Arial;
+    font-size: smaller; /* If other captions are italic */
+    /* Add any other styles that are applied to other figcaptions */
+}
+

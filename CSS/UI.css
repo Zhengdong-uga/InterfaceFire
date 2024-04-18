@@ -1,0 +1,259 @@
+/* General styles and resets */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    background-color: #060606;
+    display: grid;
+    place-items: center;
+    color: rgb(255, 255, 255);
+    padding-top: 100px;
+}
+
+h1{
+    font-family: Robotic;
+}
+
+/* Header styles */
+.header-container {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    height: 60px;
+}
+
+.header-bar {
+    display: flex;
+    justify-content: space-between; /* Aligns the logo to the left and menu items to the right */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* Centers the header */
+    padding: 0 20px; /* Adds horizontal padding */
+}
+
+.header-bar .logo {
+    font-size: 24px; /* Adjusts the logo size */
+    color: #ffffff; /* Sets the logo color */
+}
+
+.header-bar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header-bar ul li {
+    padding: 0 15px; /* Adjusts the spacing between nav items */
+}
+
+.header-bar ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Ensures text color contrasts against the white background */
+    font-weight: bold;
+    transition: color 0.3s; /* Smooth transition for hover effects */
+}
+
+.header-bar ul li a:hover {
+    color: #ff4500; /* Adds a hover effect with a color change */
+}
+
+/* Gallery specific styles to avoid collisions */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #ff9a9a;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.gallery-item {
+    flex-basis: 32.7%;
+    margin-bottom: 6px;
+    opacity: .85;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover {
+    opacity: 1;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto; /* Changed from 100% to auto for better aspect ratio handling */
+    object-fit: cover;
+}
+
+/* Media queries to maintain responsiveness */
+@media (max-width: 767px) {
+    .gallery-container {
+        width: 100%;
+    }
+    .gallery-item {
+        flex-basis: 49.80%;
+        margin-bottom: 3px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        flex-basis: 100%;
+        margin-bottom: 1px;
+    }
+}
+
+
+:root {
+    --glitched-duration: 0.9s;
+    --glitched-long-duration: 3s;
+    --yellow-color: #f9f002;
+    --yellow-color-opacity: #f9f00242;
+    --orange-color: #ff9800;
+    --border-color: #8ae66e;
+    --red-color: #ef4343;
+    --blue-color: #0c5f74;
+    --green-color: #298d29;
+    --purple-color: purple;
+    --neon-color: #39ff14;
+    --black-color: #000;
+  }
+  
+  body {
+    background-color: var(--black-color);
+  } 
+  
+  /* Images frames */
+  
+  img.cyberpunk,
+  .cyberpunk img {
+    padding: 30px ;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 15px;
+    clip-path: polygon(0px 25px, 26px 0px, calc(60% - 25px) 0px, 60% 25px, 100% 25px, 100% calc(100% - 10px), calc(100% - 15px) calc(100% - 10px), calc(80% - 10px)  calc(100% - 10px), calc(80% - 15px) calc(100% - 0px), 10px  calc(100% - 0px), 0% calc(100% - 10px));
+    background-color: var(--red-color);
+    max-width: calc(100% - 10px);
+  }
+  
+  /* Section */
+  section.cyberpunk {
+    background-color: var(--black-color);
+    color: var(--black-color);
+    padding: 60px 60px;
+    position: relative;
+    margin-top: -1px;
+    margin-bottom: -1px;
+  }
+  section.cyberpunk:after,
+  section.cyberpunk.black:after {
+    content: " ";
+    display: block;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 30px;
+    background-color: var(--black-color);
+    position: absolute;
+    clip-path: polygon(0% 0%, 22% 0%, calc(22% + 30px) 30px, 52% 30px, calc(52% + 15px) 15px, 70% 15px, calc(70% + 15px) 30px, 90% 30px, calc(90% + 30px) 0px, 100% 0px, 100% 30px, 0px 30px);
+  }
+  
+  section.cyberpunk.both:after,
+  section.cyberpunk.both.black:after {
+    height: 100%;
+    clip-path: polygon(
+      0px 30%,
+      30px calc(30% + 30px), 
+      30px calc(100% - 30px), 
+      22% calc(100% - 30px), 
+      calc(22% + 30px) 100%, 
+      52% 100%, calc(52% + 15px) 
+      calc(100% - 15px), 
+      70% calc(100% - 15px), 
+      calc(70% + 15px) 100%, 
+      90% 100%, 
+      calc(90% + 30px) calc(100% - 30px), 
+      100% calc(100% - 30px), 
+      100% 100%, 
+      0px 100%);
+    /*background-color: red;*/
+  }
+  
+  section.cyberpunk.black:after {
+    background-color: var(--black-color);
+  }
+  
+  section.cyberpunk.black {
+    background-color: var(--black-color);
+    color: var(--yellow-color);
+  }
+  
+  section.cyberpunk:before,
+  section.cyberpunk.black:before {
+    content: " ";
+    display: block;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 30px;
+    background-color: var(--black-color);
+    position: absolute;
+    clip-path: polygon(
+      calc(22% + 28px) -1px, 
+      calc(22% + 45px) 15px, 
+      34% 15px, 
+      calc(34% + 15px) -1px, 
+      70% 0px
+    );
+  }
+  
+  section.cyberpunk.both:before,
+  section.cyberpunk.both.black:before {
+    height: 100%;
+    clip-path: polygon(
+      calc(22% + 28px) -1px, 
+      calc(22% + 45px) 15px, 
+      34% 15px, 
+      calc(34% + 15px) -1px, 
+      0% 0%, 0% 10%, 
+      30px calc(10% + 30px), 
+      30px 100%, 
+      0% 100%,
+      0% 0%
+    );
+  }
+  
+  /*30px 0px,
+      30px 50%,
+      0px calc(50% + 30px),
+      0px 80%,
+      30px calc(80% + 30px),
+      30px 100%,
+      0% 100%, 0px 30px, 
+      31px 0%*/
+  
+  section.cyberpunk:before {
+    background-color: var(--black-color);
+  }
+  
+  section.cyberpunk:nth-child(even):after,
+  section.cyberpunk:nth-child(odd):before {
+   transform: scaleX(-1);
+  }
+  
