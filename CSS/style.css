@@ -89,7 +89,7 @@ body {
 
 .card {
   min-width: 200px;
-  height: 350px;
+  height: 380px;
   flex: 1 1 250px;
   background-color: rgba(255, 255, 255, 0.12);
   border-radius: 12px;
