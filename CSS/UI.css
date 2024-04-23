@@ -256,4 +256,18 @@ h1{
   section.cyberpunk:nth-child(odd):before {
    transform: scaleX(-1);
   }
+
+/* zoom effect */
+.img-zoom-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-zoom {
+  transition: transform 0.5s ease;
+}
+
+.img-zoom:hover {
+  transform: scale(1.1);
+}
   
