@@ -350,3 +350,29 @@ background: linear-gradient(0deg, rgba(0,172,238,1) 0%, rgba(2,126,251,1) 100%);
   margin: 40px auto;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .body{
+      padding: 20px;
+      margin: 20px;
+
+  }
+
+  .header-bar ul {
+      padding: 0; /* Remove padding */
+      margin: 0; /* Remove margin */
+      list-style: none; /* Remove bullet points */
+      display: flex; /* Use flexbox for alignment */
+      justify-content: center; /* Center the items horizontally */
+      flex-direction: row; /* Stack the items vertically */
+  }
+
+  
+  .header-bar ul li a {
+      padding: 10px; /* Add padding to make the links easier to click */
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-weight: bold;
+      transition: color 0.3s ease 0s;
+  }
+}
