@@ -8,11 +8,11 @@ You can view the live application here: [InterfaceFire](https://zhengdong-uga.gi
 
 You can view the Github repo here: [Github Repo](https://github.com/Zhengdong-uga/InterfaceFire)
 
-- Several Technologies were used (e.g., HTML, CSS, Script) to achieve this website. 
+- Several Technologies were used (e.g., HTML, CSS, Script) to build this website. 
 - Accessbility tools: [axe DevTools](https://www.deque.com/), [WAVE](https://wave.webaim.org/), [W3C validator](https://validator.w3.org/) and [Color Contrast](https://accessibleweb.com/color-contrast-checker/) were used to test the accessbility. 
 
 ## Project Description
-The final iteration of InterfaceFire includes 3 html pages and each pages has its unique 3 css style sheets:
+The final iteration of InterfaceFire includes 3 html pages and each pages has its unique css style sheets:
 - **index.html**: Main page introducing the project with a brief introduction of this project and several insights of critique for the game cyberpunk 2077, enriched with embedded videos and images. [hr] breaklines were used to seperate each rich content sections. 
 - **index.css**: Imported Poppins font for overall webpage styling; Black, Grey, White and Red are the main colors. Customized hr breaklines to fit the thematic elements and displays images and captions distinctively.
 - **UIcollection.html**: Displaying a collection of user interface designs from various games.(The content will be growing over the time as I want to contine to build this web). 
